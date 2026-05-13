@@ -1,0 +1,23 @@
+CREATE DATABASE IF NOT EXISTS hackathon_db;
+
+USE hackathon_db;
+
+CREATE TABLE IF NOT EXISTS air_quality (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	city VARCHAR(100) NOT NULL,
+	overall_aqi INT NOT NULL,
+	CO_concentration DECIMAL(10, 2) NOT NULL,
+	CO_aqi INT NOT NULL,
+	PM10_concentration DECIMAL(10, 2) NOT NULL,
+	PM10_aqi INT NOT NULL,
+	SO2_concentration DECIMAL(10, 2) NOT NULL,
+	SO2_aqi INT NOT NULL,
+	PM2_5_concentration DECIMAL(10, 2) NOT NULL,
+	O3_concentration DECIMAL(10, 2) NOT NULL,
+	O3_aqi INT NOT NULL,
+	NO2_concentration DECIMAL(10, 2) NOT NULL,
+	NO2_aqi INT NOT NULL,
+	status VARCHAR(100) NOT NULL,
+	risk VARCHAR(100) NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
